@@ -11,7 +11,7 @@ pip install -r requirements.txt
 ## Web
 
 通过下列链接下载相应权重，放在主目录下并命名为"models"
-
+链接: https://pan.baidu.com/s/11OYX48BaaZcjb-ZSHHUZJg?pwd=x5c6 提取码: x5c6 
 
 运行
 
