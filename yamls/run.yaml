@@ -1,0 +1,29 @@
+model_name: ./models/Qwen2.5-7B-Instruct
+max_new_tokens: 4096
+training: false
+resume_from_checkpoint: ./output/checkpoint-895
+with_test: true
+allow_quantization: false
+dataset:
+  name: qa_dataset
+  dataset_path: ./data/TruthReader/
+  max_length: 9731
+lora:
+  r: 16
+  lora_alpha: 16
+  lora_dropout: 0.1
+TrainingArgs:
+  output_dir: ./output
+  per_device_train_batch_size: 1
+  gradient_accumulation_steps: 8
+  logging_steps: 10
+  num_train_epochs: 2
+  learning_rate: 0.00001
+  save_strategy: epoch
+  save_on_each_node: true
+  gradient_checkpointing: True
+  resume_from_checkpoint: True
+  fp16: True
+  # dataloader_num_workers: 2
+swanlab:
+  project: Chatbot-QA-Finetuning

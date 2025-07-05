@@ -1,0 +1,15 @@
+model_name: ./models/qwen2.5-7b-ft
+max_context_len: 5632
+max_new_tokens: 4096
+retrieved_doc_num: 4
+vector_base:
+  model_name: ./models/bge-m3-HIT-ft
+  method: semantic
+  ocr_model_path: ./models/nougat-small-onnx
+  recursive:
+    chunk_size:
+    chunk_overlap:
+  semantic:
+    window_size: 5
+    percentile_threshold: 92
+    chunk_overlap: 2

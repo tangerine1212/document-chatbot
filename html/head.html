@@ -1,0 +1,23 @@
+<script>
+    console.log("Citation click handler script loaded via head.html.");
+    document.addEventListener('click', function(e) {
+        if (e.target && e.target.classList.contains('citation-link')) {
+            e.preventDefault();
+            var citation = e.target.innerText.trim().slice(1, -1);
+            console.log("Extracted citation:", citation);
+
+            // 定位到 textarea 元素
+            var citationInput = document.querySelector('#citation_input textarea');
+            var citationButton = document.querySelector('#citation_button');
+            
+            if (citationInput) {
+                citationInput.value = citation;
+                console.log("Set textarea value to:", citationInput.value);
+                citationInput.dispatchEvent(new Event("input", { bubbles: true }));
+                citationButton.click()
+            } else {
+                console.error("Textarea not found in #citation_input!");
+            }
+        }
+    });
+</script>
