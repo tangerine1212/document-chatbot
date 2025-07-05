@@ -4,20 +4,22 @@
 
 ## 环境
 
+通过下列链接下载相应权重，放在主目录下并命名为"models"。提供了0.5B，3B，7B的微调qwen2.5权重
+
+| 7B | https://pan.baidu.com/s/1_aF4aJA54tZRI0HQbSVoWA?pwd=8xk2 |
+| 3B | https://pan.baidu.com/s/1UuMhNukon1WV_p00rrclBg?pwd=rru3 |
+| 0.5B | https://pan.baidu.com/s/1WWMGWPWYdmU9Di4GF3fRnQ?pwd=dhhp |
+
 ```
 pip install -r requirements.txt
 ```
 
 ## Web
 
-通过下列链接下载相应权重，放在主目录下并命名为"models"
-
-链接: https://pan.baidu.com/s/11OYX48BaaZcjb-ZSHHUZJg?pwd=x5c6 提取码: x5c6 
-
 运行
 
 ```
-python app.py --config_path yamls/chatbot.yaml
+python app.py --config yamls/chatbot.yaml
 ```
 
 ## 训练
@@ -27,7 +29,7 @@ python app.py --config_path yamls/chatbot.yaml
 运行
 
 ```
-python train.py --config_path yamls/train.yaml
+python train.py --config yamls/train.yaml
 ```
 
 ## RAG
