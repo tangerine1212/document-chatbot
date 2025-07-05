@@ -1,6 +1,7 @@
 # 语义划分RAG增强的可信问答系统
 
 该项目是课程自然语言处理的期末大作业，在大模型微调上主要借鉴了[TruthReader](https://github.com/HITsz-TMG/TruthReader-document-assistanthttps://)，并实现了训练代码，在此基础上作出了一些改进。
+![web](web.png)
 
 ## 环境
 
