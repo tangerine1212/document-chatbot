@@ -34,6 +34,12 @@ python app.py --config yamls/chatbot.yaml
 python train.py --config yamls/train.yaml
 ```
 
+快速测试给定样例
+
+```
+python test.py
+```
+
 ## RAG
 
 RAG相关代码及可视化在文件夹RAG中
